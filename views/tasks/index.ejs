@@ -1,0 +1,12 @@
+<% layout('layouts/boilerplate')%>
+    <h1>All Tasks</h1>
+    <div>
+        <a href="/tasks/new">Add New Task</a>
+    </div>
+    <ul>
+        <% for (let task of tasks) {%>
+            <li><a href="/tasks/<%=task.id%>">
+                    <%= task.title %>
+                </a></li>
+            <% }%>
+    </ul>
